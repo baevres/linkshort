@@ -57,7 +57,7 @@ def url_page(request, url_id):
     context = {
         'title': 'Сокращенная ссылка',
         'current_url': current_url,
-
+        'now': now
     }
     return render(request, 'main/url_page.html', context)
 

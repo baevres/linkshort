@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'linkshort.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'linkshort',
         'USER': 'postgres',
         'PASSWORD': 'xxx270716',

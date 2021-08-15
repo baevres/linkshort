@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'linkshort',
         'USER': 'postgres',
         'PASSWORD': 'xxx270716',
-        'HOST': '127.0.0.1',
+        'HOST': 'linkshor.herokuapp.com',
         'PORT': '5432'
     }
 }
@@ -111,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 

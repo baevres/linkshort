@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+
+<div class="input-url">
+    <h3>Введи ссылку:</h3>
+    <form action="." method="post">
+        {% csrf_token %}
+
+        <input class="form-control" type="text" name="url">
+        <button type="submit" class="btn btn-warning">Сократить</button>
+    </form>
+
+</div>
+
+{% endblock %}

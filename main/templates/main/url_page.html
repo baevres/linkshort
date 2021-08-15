@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+<div class="url-page">
+    <p><a href="{% url 'main_page' %}">На главную</a></p>
+
+    <h3>Оригинальная ссылка:</h3>
+    <p><a href="{{ current_url.url }}">{{ current_url.url }}</a></p>
+
+    <h3>Сокращенная:</h3>
+    <p><a href="{{ current_url.url }}" target="_blank">{{ current_url.short_url }}</a></p>
+
+    <h4>Время жизни ссылки (до):</h4>
+    <h5>{{ current_url.end_time|time:"H:i:s" }}</h5>
+</div>
+
+{% endblock %}

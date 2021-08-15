@@ -1,0 +1,80 @@
+.head {
+    width: 100%;
+}
+
+.menu {
+    font-family: sans;
+    font-size: 22px;
+    background: black;
+    color: white;
+	height: 3.1rem;
+
+}
+
+.menu ul{
+    margin: 0;
+}
+
+.menu li{
+    float: left;
+    margin: 5px 40px 0 120px;
+
+    list-style: none;
+
+}
+
+.menu li.about {
+    margin-top: 8px;
+}
+
+.menu li a {
+	color: white;
+	text-decoration: none;
+	}
+
+.menu li a:hover {
+    color: blue;
+}
+
+
+
+.content {
+    font-family: sans;
+}
+
+
+.input-url {
+    font-size: 27px;
+    margin: 10px 0 0 190px;
+    width: 40rem;
+}
+
+.form-control {
+    margin: 0 0 15px 0;
+}
+
+
+
+.url-page {
+    font-size: 27px;
+    margin: 30px 0 0 190px;
+}
+
+.url-page a {
+    margin: 10px 0 15px 0;
+    padding: 0 0 0 0;
+}
+
+.url-page h3 {
+    margin: 0 0 0 0;
+}
+
+
+.about-page {
+    font-size: 27px;
+    margin: 30px 0 0 190px;
+}
+
+.about-page p {
+    margin: 0 0 0 0;
+}

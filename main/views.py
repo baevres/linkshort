@@ -45,7 +45,7 @@ def main_page(request):
 
 
 def url_page(request, url_id):
-    now = timezone.now().time()
+    now = datetime.datetime.now().time()
     current_url = ShortLink.objects.get(pk=url_id)
 
     if now >= current_url.end_time:

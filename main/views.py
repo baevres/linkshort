@@ -3,7 +3,7 @@ from django.db.utils import IntegrityError
 
 from .models import *
 from .base import *
-
+from django.utils import timezone
 import datetime
 
 
@@ -45,7 +45,7 @@ def main_page(request):
 
 
 def url_page(request, url_id):
-    now = datetime.datetime.now().time()
+    now = timezone.now().time()
     current_url = ShortLink.objects.get(pk=url_id)
 
     if now >= current_url.end_time:

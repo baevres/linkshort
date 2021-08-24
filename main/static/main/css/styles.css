@@ -54,6 +54,12 @@
 }
 
 
+.last-urls{
+    margin-top: 15px;
+}
+
+
+
 
 .url-page {
     font-size: 27px;
@@ -76,7 +82,7 @@
 
 .about-page {
     font-size: 27px;
-    margin: 30px 0 0 190px;
+    margin: 30px 120px 0 190px;
 }
 
 .about-page p {

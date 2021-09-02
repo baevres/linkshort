@@ -137,3 +137,11 @@ MEDIA_URL = '/media/'
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+
+CELERY_TIMEZONE = "Europe/Kiev"
+BASE_REDIS_URL = os.environ.get('REDIS_URL', 'redis://127.0.0.1:6379')
+CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
+CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379/0"
+BROKER_TRANSPORT_OPTIONS = {'visibility_timeout': 3600}
+CELERY_RESULT_BACKEND = BASE_REDIS_URL

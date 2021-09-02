@@ -15,6 +15,7 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     'delete-urls-every-hour': {
         'task': 'main.tasks.delete_url',
-        'schedule': crontab(hour='*', minute=0),  # change to `crontab(minute=0, hour=0)` if you want it to run daily at midnight
+        'schedule': crontab(),  # change to `crontab(minute=0, hour=0)` if you want it to run daily at midnight
     },
 }
+#hour='*', minute=0

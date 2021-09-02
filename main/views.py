@@ -19,7 +19,7 @@ def create_url(in_model, lst):
     while True:
         try:
             dec = generator()
-            in_model.short_url = lst[0] + next(dec)[0]
+            in_model.short_url = lst + next(dec)[0]
             in_model.save()
             break
         except IntegrityError:
@@ -34,7 +34,7 @@ def main_page(request):
         if lst:
             in_model = ShortLink.objects.get_or_create(url=url)[0]
             if not in_model.short_url:
-                create_url(in_model, lst)
+                create_url(in_model, lst[0])
 
                 return redirect('url_page', in_model.id)
             else:
@@ -56,9 +56,8 @@ def url_page(request, url_id):
     current_url = ShortLink.objects.get(pk=url_id)
 
     if now >= current_url.end_time:
-        current_url.short_url, current_url.end_time = None, None
-        current_url.save()
-        create_url(current_url)
+        lst = search(current_url.url)
+        create_url(current_url, lst[0])
         return redirect('url_page', url_id)
 
     context = {

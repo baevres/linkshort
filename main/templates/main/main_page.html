@@ -8,13 +8,14 @@
         {% csrf_token %}
 
         <input class="form-control" type="text" name="url">
+
         <button type="submit" class="btn btn-warning">Сократить</button>
     </form>
     <div class="last-urls">
         <h2>Последние сокращенные ссылки</h2>
         <ul>
             {% for x in urls %}
-            <li><a href="{{ x.url }}">{{x.short_url}}</a></li>
+            <li><a href="{% url 'url_page' x.id %}">{{x.short_url}}</a></li>
             {% endfor %}
         </ul>
     </div>

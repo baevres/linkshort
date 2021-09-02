@@ -142,8 +142,8 @@ DATABASES['default'].update(db_from_env)
 
 
 CELERY_TIMEZONE = "Europe/Kiev"
-BASE_REDIS_URL = os.environ.get('REDIS_URL', 'redis://:pf1daf8f82f4676ccfda73da8cbff0bba5b7b8a6b39d2b12fc38eb8507665d764@ec2-54-170-250-90.eu-west-1.compute.amazonaws.com:20070')
-CELERY_BROKER_URL = "redis://:pf1daf8f82f4676ccfda73da8cbff0bba5b7b8a6b39d2b12fc38eb8507665d764@ec2-54-170-250-90.eu-west-1.compute.amazonaws.com:20070"
-CELERY_RESULT_BACKEND = "redis://:pf1daf8f82f4676ccfda73da8cbff0bba5b7b8a6b39d2b12fc38eb8507665d764@ec2-54-170-250-90.eu-west-1.compute.amazonaws.com:20070"
+BASE_REDIS_URL = os.environ.get('REDIS_URL', 'redis://redistogo:77c811707ee548686a360405ef668495@soapfish.redistogo.com:11667')
+CELERY_BROKER_URL = "redis://redistogo:77c811707ee548686a360405ef668495@soapfish.redistogo.com:11667/"
+CELERY_RESULT_BACKEND = "redis://redistogo:77c811707ee548686a360405ef668495@soapfish.redistogo.com:11667/"
 BROKER_TRANSPORT_OPTIONS = {'visibility_timeout': 3600}
 CELERY_RESULT_BACKEND = BASE_REDIS_URL
